@@ -1,5 +1,15 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
+import { RouterLink, RouterView,useRouter } from 'vue-router'
+import { ref } from 'vue'
+const router = useRouter()
+const inputValue = ref('')
+
+// Use a function to perform the navigation
+const navigateToDestination = () => {
+  // Access the value using .value with refs
+  router.push(`/city/${inputValue.value}`);
+};
+
 </script>
 
 <template>
@@ -57,20 +67,23 @@ import { RouterLink, RouterView } from 'vue-router'
     <RouterView />
   </div>
 </template>
+<!-- 
+<script setup>
+// export default {
+//   data() {
+//     return {
+//       inputValue: ''
+//     }
+//   },
+//   methods: {
+//     navigateToDestination() {
+//       this.$router.push({
+//         path: `/city/${this.inputValue}`
+//       })
+//     }
+//   }
+// }
 
-<script>
-export default {
-  data() {
-    return {
-      inputValue: ''
-    }
-  },
-  methods: {
-    navigateToDestination() {
-      this.$router.push({
-        path: `/city/${this.inputValue}`
-      })
-    }
-  }
-}
-</script>
+
+
+</script> -->
