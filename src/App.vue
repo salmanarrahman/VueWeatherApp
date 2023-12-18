@@ -1,6 +1,8 @@
 <script setup>
 import { RouterLink, RouterView,useRouter } from 'vue-router'
 import { ref } from 'vue'
+import menu from './assets/menu.png'
+import Footer from './components/Footer.vue';
 const router = useRouter()
 const inputValue = ref('')
 
@@ -12,13 +14,13 @@ const navigateToDestination = () => {
 
 </script>
 
-<template>
-  <div class="container mx-auto">
-    <div className="navbar bg-base-100">
+<template >
+  <div  class="container mx-auto">
+    <div className="top navbar  bg-base-100">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex="{0}" role="button" className="btn btn-ghost lg:hidden">
-            <svg
+            <!-- <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-5 w-5"
               fill="none"
@@ -31,7 +33,8 @@ const navigateToDestination = () => {
                 strokeWidth="2"
                 d="M4 6h16M4 12h8m-8 6h16"
               />
-            </svg>
+            </svg> -->
+            <img src="./assets/menu.png" class="h-5 w-5" alt="menu" />
           </div>
           <ul
             tabIndex="{0}"
@@ -42,13 +45,13 @@ const navigateToDestination = () => {
             <li><RouterLink to="/about">Dhaka</RouterLink></li>
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl">daisyUI</a>
+       <a href="/"  className="btn btn-ghost text-xl">Miaka</a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
           <li><RouterLink to="/">Miazaki</RouterLink></li>
 
-          <li><RouterLink to="/about">Dhaka</RouterLink></li>
+          <li><RouterLink to="/dhaka">Dhaka</RouterLink></li>
         </ul>
       </div>
       <div className="navbar-end">
@@ -66,24 +69,6 @@ const navigateToDestination = () => {
 
     <RouterView />
   </div>
+  <Footer></Footer>
 </template>
-<!-- 
-<script setup>
-// export default {
-//   data() {
-//     return {
-//       inputValue: ''
-//     }
-//   },
-//   methods: {
-//     navigateToDestination() {
-//       this.$router.push({
-//         path: `/city/${this.inputValue}`
-//       })
-//     }
-//   }
-// }
 
-
-
-</script> -->

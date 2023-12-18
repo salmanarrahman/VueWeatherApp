@@ -8,7 +8,10 @@ export default {
       lg: '976px',
       xl: '1440px'
     },
-    extend: {}
+    extend: {},
+    fontFamily: {
+      sans: ['Quicksand', 'sans-serif']
+    }
   },
   daisyui: {
     themes: ['light', 'dark', 'retro']
