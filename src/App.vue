@@ -45,7 +45,7 @@ const navigateToDestination = () => {
             <li><RouterLink to="/about">Dhaka</RouterLink></li>
           </ul>
         </div>
-       <a href="/"  className="btn btn-ghost text-xl">Miaka</a>
+       <a href="/"  className="btn btn-ghost text-xl">Weather Application</a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
